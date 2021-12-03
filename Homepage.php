@@ -1,3 +1,14 @@
+<?php
+$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+$bberry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
+$webos = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");
+if ($android || $bberry || $iphone || $ipod || $webos== true) 
+{ 
+header('Location: http://localhost/study_hall/hall/mobile');
+}
+?>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,17 +88,7 @@ li a:hover {
   <li><a href="#contact">ارتباط با سالن</a></li>
   <li><a href="#contact">درباره ما</a></li>
 </ul>
-<div class="container">
- <div class="circ3"></div>
-  <div class="circ">
-       <div class="c7"></div>
-       <div class="c9"></div>
-       <div class="c6"></div>
-       <div class="c5"></div>
-       <div class="c12"></div>
-       <div class="c21"></div>
-  </div>
-</div>
+
 <div class="login-box">
   <form  method="POST">
     <a href="/registery/mananger/admins/insertion.admin.php">
