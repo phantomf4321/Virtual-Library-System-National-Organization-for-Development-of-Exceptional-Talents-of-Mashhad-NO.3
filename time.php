@@ -12,23 +12,50 @@
   </head>
   <body>
     
-    <h1 class="text-center py-4 my-4">sing up</h1>
+<br>
+    <hr class="bg-dark w-50 m-auto">
+    <div class="lists w-50 m-auto my-4">
+        <h1>members</h1>
+        <div id="lists">
+        <table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">FirstName</th>
+    <th>LastName</th>
+	<th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php
+        include 'database.php';
+        $sql="SELECT * FROM student";
+        $result=mysqli_query($conn, $sql);
 
-    <div class="w-50 m-auto">
-    <form action="data.php" method="post" autocomplete="off">
-        <div class="form-group">
-            <label for="title">First name</label>
-            <input class="form-control" type="text" name="firstname" id="title" placeholder="" Required>
-            <label for="title">Last name</label>
-            <input class="form-control" type="text" name="lastname" id="title" placeholder="" Required>
-			<label for="title">Class</label>
-            <input class="form-control" type="text" name="class" id="title" placeholder="" Required>
-			<label for="title">Phone</label>
-            <input class="form-control" type="text" name="phone" id="title" placeholder="" Required>
-        </div><br>
-        <button class="btn btn-success">submit</button>
+        if($result){
+            while($row=mysqli_fetch_assoc($result)){
+                $id=$row['id'];
+                $fname=$row['firstname'];
+				$lname=$row['lastname'];
+                $time=$row['time'];
 
-    </form>
+
+                ?>
+                <tr>
+                    <td><?php echo $fname  ?></td>
+					<td><?php echo $lname  ?></td>
+					<td><?php echo $time  ?></td>
+                    <td>
+                    <a class="btn btn-success btn-sm" href="timeadder.php?id=<?php echo $id ?>" role="button">حاضر</a> 
+                    </td>
+                      
+                </tr>
+
+                <?php
+
+                
+            }
+        }
+    ?>
     
    
   </tbody>

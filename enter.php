@@ -8,25 +8,17 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <title>ثبت نام در تالار مطالعه استاد صمدي</title>
+    <title>ورود به پنل مديريت سالن</title>
   </head>
   <body>
     
-    <h1 class="text-center py-4 my-4">sing up</h1>
+    <h1 class="text-center py-4 my-4">رمز ورود را وارد كنيد</h1>
 
     <div class="w-50 m-auto">
-    <form action="data.php" method="post" autocomplete="off">
-        <div class="form-group">
-            <label for="title">First name</label>
-            <input class="form-control" type="text" name="firstname" id="title" placeholder="" Required>
-            <label for="title">Last name</label>
-            <input class="form-control" type="text" name="lastname" id="title" placeholder="" Required>
-			<label for="title">Class</label>
-            <input class="form-control" type="text" name="class" id="title" placeholder="" Required>
-			<label for="title">Phone</label>
-            <input class="form-control" type="text" name="phone" id="title" placeholder="" Required>
+<form action="enter.php" method="get">
+<input type="password" name="password" placeholder="password"><br>
         </div><br>
-        <button class="btn btn-success">submit</button>
+        <button class="btn btn-success">ورود</button>
 
     </form>
     
@@ -35,7 +27,18 @@
 </table>
         </div>
     </div>
+<?php
+    $id=$_GET['password'];
 
+    if($id==5510){
+        header("location: ./admin.html");
+    }
+	else
+	{
+		echo "wrong password";
+	}
+
+?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

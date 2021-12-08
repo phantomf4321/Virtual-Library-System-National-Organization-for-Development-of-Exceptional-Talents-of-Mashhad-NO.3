@@ -15,7 +15,7 @@
     <h1 class="text-center py-4 my-4">sing up</h1>
 
     <div class="w-50 m-auto">
-    <form action="data.php" method="post" autocomplete="off">
+    <form action="singupdata.php" method="post" autocomplete="off">
         <div class="form-group">
             <label for="title">First name</label>
             <input class="form-control" type="text" name="firstname" id="title" placeholder="" Required>
