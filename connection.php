@@ -4,7 +4,8 @@ $lname ="";
 $time ="";
 
 $db = mysqli_connect('localhost', 'root', '', 'study_hall');
-if (isset($_POST['submit'])){
+if (isset($_POST['submit']))
+{
 $fname = $_POST['firstname'];
 $lname = $_POST['lastname'];
 $time = $_POST['time'];
