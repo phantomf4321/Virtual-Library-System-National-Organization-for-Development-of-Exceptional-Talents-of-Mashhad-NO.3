@@ -12,6 +12,7 @@ $query = "INSERT INTO `student` (`firstname`, `lastname`, `time`) VALUES ('$fnam
 mysqli_query($db,$query);
 header('location:form.php');
 }
+
 $sql = "SELECT * FROM student";
 $result = mysqli_query($db,$sql);
 ?>
