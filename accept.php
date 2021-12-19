@@ -9,7 +9,6 @@
     <title>ثبت نام در تالار مطالعه استاد صمدي</title>
   </head>
   <body>
-    
 <br>
     <hr class="bg-dark w-50 m-auto">
     <div class="lists w-50 m-auto my-4">
