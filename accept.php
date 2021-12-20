@@ -36,8 +36,7 @@
 				$lname=$row['lastname'];
 				$class=$row['class'];
 				$phone=$row['phone'];
-               
-
+              
 
                 ?>
                 <tr>
