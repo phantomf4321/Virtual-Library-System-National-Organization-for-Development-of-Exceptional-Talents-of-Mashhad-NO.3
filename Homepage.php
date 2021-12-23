@@ -75,7 +75,6 @@ li a:hover {
    echo 'ساعت ورود شما به سامانه';
    echo date('H:i');
    ?>
-
 </div>
 
 <ul>
